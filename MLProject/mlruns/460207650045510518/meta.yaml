@@ -1,0 +1,9 @@
+artifact_location: file:///C:/Users/Lenovo/OneDrive/Documents/Praktikum%20dan%20Dokumen/python%20Project/dicoding/Membangun%20Sistem%20ML/SMSML/Workflow-CI/MLProject/mlruns/460207650045510518
+creation_time: 1780545342552
+effective_trace_archival_retention: null
+experiment_id: '460207650045510518'
+last_update_time: 1780545342552
+lifecycle_stage: active
+name: workflow_ci_basic
+trace_location: null
+workspace: default

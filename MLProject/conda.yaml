@@ -1,0 +1,14 @@
+name: workflow-ci
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - mlflow==3.13.0
+      - pandas
+      - scikit-learn
+      - matplotlib
+      - prometheus_client
+      - flask
+      - requests

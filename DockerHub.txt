@@ -1,0 +1,11 @@
+Docker Hub target for Advance stage.
+
+Required GitHub Secrets:
+- DOCKERHUB_USERNAME
+- DOCKERHUB_TOKEN
+- DOCKERHUB_REPOSITORY
+
+Example repository name:
+username/workflow-ci-mlflow
+
+The workflow will build a Docker image with `mlflow models build-docker` and push it only when the secrets above are present.

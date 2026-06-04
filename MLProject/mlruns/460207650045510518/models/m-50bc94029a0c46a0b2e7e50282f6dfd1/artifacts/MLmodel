@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/Lenovo/OneDrive/Documents/Praktikum%20dan%20Dokumen/python%20Project/dicoding/Membangun%20Sistem%20ML/SMSML/Workflow-CI/MLProject/mlruns/460207650045510518/models/m-50bc94029a0c46a0b2e7e50282f6dfd1/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-50bc94029a0c46a0b2e7e50282f6dfd1
+model_size_bytes: 63087
+model_uuid: m-50bc94029a0c46a0b2e7e50282f6dfd1
+prompts: null
+run_id: 6260910e5e6d45e0bb988d3e909c527c
+utc_time_created: '2026-06-04 04:33:01.380442'
