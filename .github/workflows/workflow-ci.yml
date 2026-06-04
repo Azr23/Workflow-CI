@@ -1,39 +1,37 @@
-
 name: CI - MLflow train
 
 on:
-	push:
-		branches: [ main, master ]
-	workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
-	train:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Checkout repository
-				uses: actions/checkout@v4
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-			- name: Set up Python 3.11
-				uses: actions/setup-python@v4
-				with:
-					python-version: '3.11'
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-			- name: Install dependencies
-				run: |
-					python -m pip install --upgrade pip
-					pip install mlflow==3.13.0 pandas scikit-learn matplotlib
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mlflow==3.13.0 pandas scikit-learn matplotlib
 
-			- name: Run MLflow Project
-				env:
-					MLFLOW_ALLOW_FILE_STORE: true
-				run: |
-					mlflow run MLProject -e train --env-manager local
+      - name: Run MLflow Project
+        env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
+        run: |
+          mlflow run MLProject -e train --env-manager local
 
-			- name: Upload MLProject artefacts
-				uses: actions/upload-artifact@v4
-				with:
-					name: mlproject-artifacts
-					path: |
-						MLProject/artifacts
-						MLProject/mlruns
-
+      - name: Upload MLProject artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: mlproject-artifacts
+          path: |
+            MLProject/artifacts
+            MLProject/mlruns
